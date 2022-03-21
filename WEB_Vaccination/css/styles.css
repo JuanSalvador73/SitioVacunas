@@ -1,0 +1,341 @@
+/*Estilos Sitio Vacuna*/
+
+*{
+    font-family: sans-serif, verdana, arial;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html, body{
+ /*font-size: 62.5%;*/
+*overflow-x: hidden;
+ scroll-behavior: smooth;
+}
+
+/*========================NAV VAR=======================*/
+
+
+header{
+    position: fixed; /*Este menÃº es fijo, siempre estÃ¡ en el header*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    z-index: 1000;
+    padding: 1.5rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: blue;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin-left: 3rem;
+}
+
+header .navbar ul li a{
+    color: #333;
+    font-size: 1.7rem;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color: blue;
+}
+
+#menu{
+    font-size: 3rem;
+    color: #666;
+    cursor: pointer;
+    display: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    max-width: 1400px;
+    border: 1px solid red;
+    background-color: aqua;
+    flex-wrap: wrap;
+    margin: auto; /*Centra el contenido del HTML*/
+    justify-content: center;
+    border: 1px solid #000;
+}
+
+#hero{
+    background-color: #ccc;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: left;
+    flex-direction: row;
+    flex-wrap:wrap; 
+    color: white;
+}
+
+#hero .left_column h1{
+    padding-top: 250px;
+}
+
+.left_column{
+
+    border: 1px solid red;
+    width: 50%;
+    padding-left: 200px;
+    padding-right: 25px;
+    height: 90vh;
+}
+
+.left_column .notes .note_1{
+    padding: 45px 8px;
+}
+
+
+.right_column{
+    border: 1px solid green;
+    width: 50%;
+    background-color: dodgerblue;
+     /*Ocupa el 90% de espacio visible*/
+}
+
+#hero .right_column img{
+    width: 100%;
+    height: auto;
+   
+}
+
+.notes{
+     border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap; 
+}
+
+.note_1{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    padding: 10px 5px;
+    border: 1px solid green;
+}
+
+.container_logos{
+    display: flex;
+    flex-direction: row;
+   
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 45px 8px;
+    
+}
+
+.container .container_logos img{
+    border: 1px solid green;
+}
+
+.container .warning_container{
+    border: 1px solid green;
+    width: 100%;
+}
+
+.container .warning_text{
+    width: 50%;
+    padding-left: 205px;
+    border: 1px solid green;
+}
+
+.container_quads{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container_quads .box_tips{
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,.1);
+    padding: 1rem;
+    margin: 1.5rem;
+    width: 16rem;
+    border: 1px solid green;
+    border-radius: 5%;
+}
+
+.container_quads .box_tips:hover{
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.container_quads .box_tips h3{
+    font-size: 1.0rem;
+    color: black;
+}
+
+.container_quads .box_tips p{
+    font-size: 1rem;
+    color: #999;
+    padding: 1rem 0;
+}
+
+.container_quads .box_tips img{
+    /*width: 7rem;*/
+    margin: .5rem .5rem;
+    border: 1px solid red;
+    
+}
+
+#container_doctora{
+    background-color: #ccc;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: left;
+    flex-direction: row;
+    flex-wrap:wrap; 
+    color: white;
+}
+
+
+#container_doctora .left_col_img{
+    border: 1px solid green;
+    width: 50%;
+    background-color: dodgerblue;
+}
+
+#container_doctora .right_col_info{
+    border: 1px solid red;
+    width: 50%;
+    padding-left: 50px;
+    padding-right: 25px;
+    height: 90vh;
+}
+
+#container_doctora  .left_col_img img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================Media Querie=======================*/
+
+@media (max-width: 768px){
+    
+    #menu{
+        display: block;
+    }
+    
+    header .navbar{
+        position: fixed;
+        top: 6.5rem; left: 0;
+        width: 100%;
+        background: #fff;
+        border-top: .2rem solid rgba(0,0,0, .1);
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    
+    header .navbar ul{
+        flex-flow: column;
+        padding: 2rem 0;
+        
+}
+    header .navbar ul li{
+        text-align: center;
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        display: block;
+    }
+
+    .fa-times{
+        transform:rotate(180deg);
+    }
+
+    header .navbar .nav-toggle{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    
+    .left_column{
+    border: 1px solid red;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 15px;
+    }
+    
+    .note_1{
+    width: 100%;
+    }
+
+    .right_column{
+    border: 1px solid green;
+    width: 100%;
+    }
+    
+    
+    .left_col_img{
+    width: 100%;
+    }
+    
+    
+    .right_col_info{
+     width: 100%;   
+    }
+}
